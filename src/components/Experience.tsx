@@ -4,7 +4,6 @@ import { Card } from "./ui/card";
 interface ExperienceItem {
   title: string;
   company: string;
-  type: string;
   period: string;
   duration: string;
   location?: string;
@@ -16,10 +15,9 @@ const experiences: ExperienceItem[] = [
   {
     title: "Desenvolvedor Kotlin",
     company: "Mapzer",
-    type: "Autônomo",
     period: "nov 2020 - jan 2026",
     duration: "5 anos 3 meses",
-    location: "Curitiba, Paraná, Brasil · Remota",
+    location: "Curitiba, Paraná, Brasil",
     description: [
       "Desenvolvimento de aplicativo Android e aplicação desktop embarcada em Kotlin",
       "Desenvolvimento e manutenção de aplicação web e APIs em ASP.NET Core",
@@ -29,10 +27,10 @@ const experiences: ExperienceItem[] = [
   },
   {
     title: "Desenvolvedor para Android",
-    company: "enjoei",
-    type: "Tempo integral",
+    company: "Enjoei",
     period: "ago 2022 - mai 2025",
     duration: "2 anos 10 meses",
+    location: "São Paulo, São Paulo, Brasil",
     description: [
       "Desenvolvimento de app Android nativo (MVVM)",
       "Migração de Java para Kotlin",
@@ -43,7 +41,6 @@ const experiences: ExperienceItem[] = [
   {
     title: "Desenvolvedor Android",
     company: "Autônomo",
-    type: "Autônomo",
     period: "fev 2013 - mai 2025",
     duration: "12 anos 4 meses",
     location: "Ilhéus, Bahia, Brasil",
@@ -58,7 +55,6 @@ const experiences: ExperienceItem[] = [
   {
     title: "Desenvolvedor Android",
     company: "Techmobil",
-    type: "Freelance",
     period: "ago 2017 - set 2019",
     duration: "2 anos 2 meses",
     location: "Ilhéus, Bahia, Brasil",
@@ -71,7 +67,6 @@ const experiences: ExperienceItem[] = [
   {
     title: "Programador Estagiário",
     company: "IPSoft",
-    type: "Estágio",
     period: "fev 2014 - set 2014",
     duration: "8 meses",
     location: "Ilhéus, Bahia, Brasil",
@@ -112,8 +107,8 @@ const Experience = () => {
               <Card className="p-6 gradient-card card-hover">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
                   <div>
-                    <h3 className="text-xl font-bold text-foreground">{exp.title}</h3>
-                    <p className="text-primary font-semibold font-mono">{exp.company} · {exp.type}</p>
+                    <h3 className="text-xl font-bold text-foreground">{exp.company}</h3>
+                    <p className="text-primary font-semibold font-mono">{exp.title}</p>
                   </div>
                   <div className="flex flex-col items-start md:items-end gap-1 text-sm text-muted-foreground font-mono">
                     <div className="flex items-center gap-2">

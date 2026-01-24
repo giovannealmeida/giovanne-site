@@ -13,7 +13,7 @@ const Hero = () => {
           {/* Avatar/Initials */}
           <div className="mb-10 animate-fade-in">
             <div className="inline-flex items-center justify-center w-28 h-28 rounded-full gradient-hero shadow-glow animate-[pulse-glow_3s_ease-in-out_infinite]">
-              <span className="text-4xl font-black text-primary-foreground">GA</span>
+              <span className="text-4xl font-black text-primary-foreground">GAM</span>
             </div>
           </div>
           
@@ -32,7 +32,7 @@ const Hero = () => {
           
           {/* Tech Stack */}
           <div className="flex flex-wrap items-center justify-center gap-3 mb-8 animate-slide-up" style={{ animationDelay: "0.15s" }}>
-            {["Java", "Kotlin", "MVVM", "Compose"].map((tech) => (
+            {["Java", "Kotlin", "Coroutines", "MVVM", "Compose", "Material 3"].map((tech) => (
               <span 
                 key={tech}
                 className="px-4 py-2 bg-secondary/50 border border-border rounded-full text-sm font-mono text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300"
@@ -45,7 +45,7 @@ const Hero = () => {
           {/* Location */}
           <div className="flex items-center justify-center gap-2 text-muted-foreground mb-10 animate-slide-up" style={{ animationDelay: "0.2s" }}>
             <MapPin className="w-4 h-4 text-primary" />
-            <span className="font-mono text-sm">Brasil</span>
+            <span className="font-mono text-sm">Ilhéus - Bahia - Brasil</span>
           </div>
           
           {/* Social Links */}
