@@ -87,52 +87,54 @@ const experiences: ExperienceItem[] = [
 
 const Experience = () => {
   return (
-    <section className="py-20 px-4" id="experience">
-      <div className="container max-w-4xl mx-auto">
-        <div className="flex items-center gap-3 mb-12">
-          <div className="p-2 rounded-lg gradient-hero">
+    <section className="py-24 px-4" id="experience">
+      <div className="container max-w-5xl mx-auto">
+        <div className="flex items-center gap-4 mb-16">
+          <div className="p-3 rounded gradient-hero shadow-glow">
             <Briefcase className="w-6 h-6 text-primary-foreground" />
           </div>
-          <h2 className="text-3xl font-bold">Experiência Profissional</h2>
+          <h2 className="text-4xl md:text-5xl font-black">
+            EXPERIÊNCIA <span className="text-primary text-glow">PROFISSIONAL</span>
+          </h2>
         </div>
         
         <div className="relative">
           {experiences.map((exp, index) => (
             <div 
               key={index} 
-              className="relative pl-10 pb-12 last:pb-0 animate-slide-up"
+              className="relative pl-12 pb-12 last:pb-0 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Timeline */}
               {index < experiences.length - 1 && <div className="timeline-line" />}
               <div className="timeline-dot" />
               
-              <Card className="p-6 gradient-card shadow-soft card-hover">
+              <Card className="p-6 gradient-card card-hover">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-foreground">{exp.title}</h3>
-                    <p className="text-primary font-medium">{exp.company} · {exp.type}</p>
+                    <h3 className="text-xl font-bold text-foreground">{exp.title}</h3>
+                    <p className="text-primary font-semibold font-mono">{exp.company} · {exp.type}</p>
                   </div>
-                  <div className="flex flex-col items-start md:items-end gap-1 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
+                  <div className="flex flex-col items-start md:items-end gap-1 text-sm text-muted-foreground font-mono">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="w-4 h-4 text-primary" />
                       <span>{exp.period}</span>
                     </div>
-                    <span className="text-xs bg-secondary px-2 py-0.5 rounded-full">{exp.duration}</span>
+                    <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded">{exp.duration}</span>
                   </div>
                 </div>
                 
                 {exp.location && (
-                  <div className="flex items-center gap-1 text-sm text-muted-foreground mb-4">
-                    <MapPin className="w-4 h-4" />
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4 font-mono">
+                    <MapPin className="w-4 h-4 text-primary" />
                     <span>{exp.location}</span>
                   </div>
                 )}
                 
                 <ul className="space-y-2 mb-4">
                   {exp.description.map((desc, i) => (
-                    <li key={i} className="flex items-start gap-2 text-muted-foreground">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <li key={i} className="flex items-start gap-3 text-muted-foreground">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0 shadow-glow-sm" />
                       <span>{desc}</span>
                     </li>
                   ))}
