@@ -3,13 +3,15 @@ import { Code2, Database, Wrench, Cloud } from "lucide-react";
 interface SkillCategory {
   icon: React.ReactNode;
   title: string;
+  highlight: string;
   skills: string[];
 }
 
 const skillCategories: SkillCategory[] = [
   {
-    icon: <Code2 className="w-5 h-5" />,
-    title: "Linguagens & Frameworks",
+    icon: <Code2 className="w-6 h-6" />,
+    title: "LINGUAGENS &",
+    highlight: "FRAMEWORKS",
     skills: [
       "Kotlin",
       "Java",
@@ -26,8 +28,9 @@ const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    icon: <Database className="w-5 h-5" />,
-    title: "Banco de Dados",
+    icon: <Database className="w-6 h-6" />,
+    title: "BANCO DE",
+    highlight: "DADOS",
     skills: [
       "MySQL",
       "PostgreSQL",
@@ -37,8 +40,9 @@ const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    icon: <Wrench className="w-5 h-5" />,
-    title: "Ferramentas & Práticas",
+    icon: <Wrench className="w-6 h-6" />,
+    title: "FERRAMENTAS &",
+    highlight: "PRÁTICAS",
     skills: [
       "Android Studio",
       "Git",
@@ -52,8 +56,9 @@ const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    icon: <Cloud className="w-5 h-5" />,
-    title: "DevOps & Cloud",
+    icon: <Cloud className="w-6 h-6" />,
+    title: "DEVOPS &",
+    highlight: "CLOUD",
     skills: [
       "CI/CD",
       "Azure DevOps",
@@ -70,27 +75,31 @@ const skillCategories: SkillCategory[] = [
 
 const Skills = () => {
   return (
-    <section className="py-20 px-4" id="skills">
-      <div className="container max-w-4xl mx-auto">
-        <div className="flex items-center gap-3 mb-12">
-          <div className="p-2 rounded-lg gradient-hero">
+    <section className="py-24 px-4 bg-secondary/30" id="skills">
+      <div className="container max-w-5xl mx-auto">
+        <div className="flex items-center gap-4 mb-16">
+          <div className="p-3 rounded gradient-hero shadow-glow">
             <Code2 className="w-6 h-6 text-primary-foreground" />
           </div>
-          <h2 className="text-3xl font-bold">Competências</h2>
+          <h2 className="text-4xl md:text-5xl font-black">
+            O QUE EU <span className="text-primary text-glow">FAÇO</span>
+          </h2>
         </div>
         
         <div className="grid md:grid-cols-2 gap-8">
           {skillCategories.map((category, index) => (
             <div 
               key={index} 
-              className="animate-slide-up"
+              className="p-6 rounded border border-border bg-card/50 card-hover animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex items-center gap-2 mb-4">
-                <div className="p-1.5 rounded-md bg-primary/10 text-primary">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-2 rounded bg-primary/10 text-primary">
                   {category.icon}
                 </div>
-                <h3 className="font-semibold text-lg">{category.title}</h3>
+                <h3 className="font-black text-lg">
+                  {category.title} <span className="text-primary">{category.highlight}</span>
+                </h3>
               </div>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, i) => (
