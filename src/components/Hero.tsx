@@ -67,7 +67,7 @@ const Hero = () => {
               className="gap-2 card-hover border-border bg-card/50 font-semibold"
               asChild
             >
-              <a href="https://github.com/giovannealmeid" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/giovannealmeida" target="_blank" rel="noopener noreferrer">
                 <Github className="w-5 h-5" />
                 GitHub
               </a>
