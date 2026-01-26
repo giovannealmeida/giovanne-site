@@ -8,12 +8,12 @@ const Footer = () => {
           <h2 className="text-3xl md:text-4xl font-black mb-2">
             VAMOS <span className="text-primary text-glow">CONVERSAR</span>?
           </h2>
-          <p className="text-muted-foreground font-mono">giovanne.almeida91@gmail.com</p>
+          <p className="text-muted-foreground font-mono">{import.meta.env.VITE_EMAIL_URL.replace('mailto:', '')}</p>
         </div>
 
         <div className="flex items-center justify-center gap-4 mb-10">
           <a
-            href="https://www.linkedin.com/in/giovanne-almeida/"
+            href={import.meta.env.VITE_LINKEDIN_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded border border-border bg-card text-muted-foreground hover:text-primary hover:border-primary/50 hover:shadow-glow-sm transition-all duration-300"
@@ -22,7 +22,7 @@ const Footer = () => {
             <Linkedin className="w-6 h-6" />
           </a>
           <a
-            href="https://github.com/giovannealmeid"
+            href={import.meta.env.VITE_GITHUB_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded border border-border bg-card text-muted-foreground hover:text-primary hover:border-primary/50 hover:shadow-glow-sm transition-all duration-300"
@@ -31,7 +31,7 @@ const Footer = () => {
             <Github className="w-6 h-6" />
           </a>
           <a
-            href="mailto:giovanne.almeida91@gmail.com"
+            href={import.meta.env.VITE_EMAIL_URL}
             className="p-3 rounded border border-border bg-card text-muted-foreground hover:text-primary hover:border-primary/50 hover:shadow-glow-sm transition-all duration-300"
             aria-label="Email"
           >

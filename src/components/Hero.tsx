@@ -57,7 +57,7 @@ const Hero = () => {
               className="gap-2 card-hover border-border bg-card/50 font-semibold"
               asChild
             >
-              <a href="https://www.linkedin.com/in/giovanne-almeida/" target="_blank" rel="noopener noreferrer">
+              <a href={import.meta.env.VITE_LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-5 h-5" />
                 LinkedIn
               </a>
@@ -68,7 +68,7 @@ const Hero = () => {
               className="gap-2 card-hover border-border bg-card/50 font-semibold"
               asChild
             >
-              <a href="https://github.com/giovannealmeida" target="_blank" rel="noopener noreferrer">
+              <a href={import.meta.env.VITE_GITHUB_URL} target="_blank" rel="noopener noreferrer">
                 <Github className="w-5 h-5" />
                 GitHub
               </a>
@@ -78,7 +78,7 @@ const Hero = () => {
               className="gap-2 gradient-hero font-bold text-primary-foreground shadow-glow animate-[pulse-glow_3s_ease-in-out_infinite]"
               asChild
             >
-              <a href="mailto:giovanne.almeida91@gmail.com">
+              <a href={import.meta.env.VITE_EMAIL_URL.replace('mailto:', '')}>
                 <Mail className="w-5 h-5" />
                 Contato
               </a>
