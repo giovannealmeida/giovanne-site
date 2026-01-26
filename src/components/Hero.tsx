@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { Button } from "./ui/button";
+import Gravatar from "./Gravatar";
 
 const Hero = () => {
   return (
@@ -12,8 +13,8 @@ const Hero = () => {
         <div className="max-w-5xl mx-auto text-center">
           {/* Avatar/Initials */}
           <div className="mb-10 animate-fade-in">
-            <div className="inline-flex items-center justify-center w-28 h-28 rounded-full gradient-hero shadow-glow animate-[pulse-glow_3s_ease-in-out_infinite]">
-              <span className="text-4xl font-black text-primary-foreground">GAM</span>
+            <div className="inline-flex items-center justify-center rounded-full gradient-hero shadow-glow animate-[pulse-glow_3s_ease-in-out_infinite]">
+              <Gravatar />
             </div>
           </div>
           
@@ -74,7 +75,7 @@ const Hero = () => {
             </Button>
             <Button 
               size="lg"
-              className="gap-2 gradient-hero shadow-glow hover:shadow-[0_0_40px_hsl(var(--primary)/0.5)] transition-all duration-300 font-bold text-primary-foreground"
+              className="gap-2 gradient-hero font-bold text-primary-foreground shadow-glow animate-[pulse-glow_3s_ease-in-out_infinite]"
               asChild
             >
               <a href="mailto:giovanne.almeida91@gmail.com">
