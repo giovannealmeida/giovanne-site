@@ -78,7 +78,7 @@ const Hero = () => {
               className="gap-2 gradient-hero font-bold text-primary-foreground shadow-glow animate-[pulse-glow_3s_ease-in-out_infinite]"
               asChild
             >
-              <a href={import.meta.env.VITE_EMAIL}>
+              <a href={`mailto:${import.meta.env.VITE_EMAIL}`}>
                 <Mail className="w-5 h-5" />
                 Contato
               </a>

@@ -8,7 +8,7 @@ const Footer = () => {
           <h2 className="text-3xl md:text-4xl font-black mb-2">
             VAMOS <span className="text-primary text-glow">CONVERSAR</span>?
           </h2>
-          <p className="text-muted-foreground font-mono">{import.meta.env.VITE_EMAIL_URL.replace('mailto:', '')}</p>
+          <p className="text-muted-foreground font-mono">{import.meta.env.VITE_EMAIL}</p>
         </div>
 
         <div className="flex items-center justify-center gap-4 mb-10">
